@@ -3,7 +3,6 @@ variables:
         required: true
         description: test var
         type: number
-        default:
     VPC_NAME:
         required: true
         description: the name of the VPC

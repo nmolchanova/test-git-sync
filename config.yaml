@@ -18,15 +18,16 @@ variables:
         default: test-public-route
     PUBLIC_SUBNET_NAME:
         required: true
-        descrip
+        description: the cloudcoreo name of the public vpc subnets
+        default: test-public-subnet
     SUFFIX:
-        required: true
+        required: false
         description: when used will use the value to suffix the names of all converged objects
         type: string
     VPC_TAGS:
-        required: true
-        description: tags to apply to the vpc this is a test
-        type: string
+        required: false
+        description: tags to apply to the vpc
+        type: array
         default:
     PUBLIC_SUBNET_NUM_ZONES:
         required: true

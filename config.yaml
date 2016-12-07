@@ -34,13 +34,3 @@ variables:
         description: How many public subnets to create
         type: number
         default: 3
-    TEST_SYNC_GIT:
-        required: true
-        description: test param for git sync
-        type: number
-        default:
-    TEST_SYNC_GIT_new:
-        required: true
-        description: test param for git sync
-        type: number
-        default:

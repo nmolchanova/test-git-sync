@@ -1,2 +1,2 @@
-cloudcoreo-vpc-public
+test-git-sync
 =====================

@@ -34,3 +34,8 @@ variables:
         description: How many public subnets to create
         type: number
         default: 3
+    NEW_PARAM2:
+        required: true
+        description: How many public subnets to create
+        type: string
+        default:

@@ -33,3 +33,7 @@ variables:
         description: How many public subnets to create
         type: number
         default: 3
+    TEST_VAR:
+        required: true
+        description: This is a test variables
+        type: number

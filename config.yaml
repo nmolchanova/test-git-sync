@@ -30,7 +30,7 @@ variables:
         type: array
         default:
     PUBLIC_SUBNET_NUM_ZONES:
-        required: false
+        required: true
         description: How many public subnets to create
         type: number
         default: 3
@@ -38,3 +38,8 @@ variables:
         required: true
         description: This is a test variables
         type: number
+    NEW_PARAM3:
+        required: true
+        description: How many public subnets to create
+        type: string
+        default:

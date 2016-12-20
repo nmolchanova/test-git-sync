@@ -38,18 +38,3 @@ variables:
         required: true
         description: This is a test variables
         type: number
-    NEW_PARAM3:
-        required: true
-        description: How many public subnets to create
-        type: string
-        default:
-    NEW_PARAM4:
-        required: true
-        description: How many public subnets to create
-        type: string
-        default:
-    NEW_PARAM5:
-        required: true
-        description: How many public subnets to create
-        type: string
-        default:        

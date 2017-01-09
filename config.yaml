@@ -34,3 +34,7 @@ variables:
         description: How many public subnets to create
         type: number
         default: 5
+    FAIL:
+        required: true
+        description: How many public subnets to create
+        type: number

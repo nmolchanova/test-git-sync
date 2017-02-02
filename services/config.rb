@@ -19,3 +19,7 @@ coreo_uni_util_notify "advise-s3-to-tag-values" do
   action :nothing
   notifiers 'COMPOSITE::coreo_uni_util_jsrunner.tags-to-notifiers-array-s3.return'
 end
+
+coreo_uni_util_variables "resource_25" do
+  action :nothing
+end

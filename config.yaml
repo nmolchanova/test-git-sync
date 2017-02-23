@@ -4,7 +4,6 @@ variables:
       required: true
       type: string
       default: "changelalalal"
-      default: "changelalalal"
   AUDIT_AWS_S3_ALLOW_EMPTY:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: false

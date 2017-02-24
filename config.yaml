@@ -16,8 +16,3 @@ variables:
       type: string
       default:
 
-  AUDIT_AWS_S3_ALLOW_Esdfs_New:
-      description: "Would you like to receive empty reports? Options - true / false. Default is false."
-      required: true
-      type: string
-      default:

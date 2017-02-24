@@ -16,7 +16,7 @@ variables:
       type: number
       default:
 
-  AUDIT_AWS_S3_ALLOW_EMPTYsadad_2:
+  AUDIT_AWS_S3_ALLOW_EMPTYsadad_2gsdfg:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: false
       type: string

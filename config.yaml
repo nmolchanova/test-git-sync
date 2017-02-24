@@ -10,14 +10,14 @@ variables:
       type: string
       default: false
 
-  AUDIT_AWS_S3_ALLOW_EMPTY_New:
+  AUDIT_AWS_S3_ALLOW_EMPTY_Nesadasdw:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: true
-      type: string
+      type: number
       default:
 
-  AUDIT_AWS_S3_ALLOW_EMPTY_2:
+  AUDIT_AWS_S3_ALLOW_EMPTYsadad_2:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
-      required: true
+      required: false
       type: string
       default:

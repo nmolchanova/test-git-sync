@@ -9,4 +9,10 @@ variables:
       required: true
       type: string
       default: false
+  AUDIT_AWS_S3_ALLOW_EMPTYasdasd:
+      description: "Would you like to receive empty reports? Options - true / false. Default is false."
+      required: true
+      type: string
+      default: false
+
 

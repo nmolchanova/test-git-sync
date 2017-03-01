@@ -3,8 +3,8 @@ variables:
       description: "Send reports always or only when there is a change? Options - always / change. Default is change."
       required: true
       type: string
-      default: "changelarwsdfsflalal"
-  AUDIT_AWS_S3_ALLOW_EMPTY:
+      default: "change"
+  AUDIT_AWS_S3_ALLOW_EMPTYa:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: false
       type: string
@@ -12,6 +12,6 @@ variables:
 
   AUDIT_AWS_S3_ALLOW_EMPTY_New:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
-      required: false
+      required: true
       type: number
-      default: 1
+      default: 3

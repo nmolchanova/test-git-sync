@@ -14,4 +14,4 @@ variables:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: true
       type: number
-      default: 3
+      default: 4

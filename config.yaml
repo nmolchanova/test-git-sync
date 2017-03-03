@@ -8,7 +8,7 @@ variables:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."
       required: false
       type: string
-      default: false
+      default: fasdfsdfsfslse
 
   AUDIT_AWS_S3_ALLOW_EMPTY_New:
       description: "Would you like to receive empty reports? Options - true / false. Default is false."

@@ -8,15 +8,15 @@ variables:
       description: "test"
       required: false
       type: string
-      default: qweq
+      default: qsfsd
   TEST_TYPE:
       description: "test"
       required: false
-      type: number
+      type: string
       default: 4
   TEST_REQUIRED:
       description: "test"
-      required: false
+      required: true
       type: number
       default: 4
   TEST_REMOVED:

@@ -1,16 +1,26 @@
 variables:
-  AUDIT_AWS_S3_SEND_ON:
-      description: "Send reports always or only when there is a change? Options - always / change. Default is change."
+  TEST:
+      description: "test"
       required: true
       type: string
       default: "change"
-  AUDIT_AWS_S3_ALLOW_EMPTYa:
-      description: "Would you like to receive empty reports? Options - true / false. Default is false."
+  TEST_DEFAULT:
+      description: "test"
       required: false
       type: string
       default: qweq
-  AUDIT_AWS_S3_ALLOW_EMPTY_New:
-      description: "Would you like to receive empty reports? Options - true / false. Default is false."
+  TEST_TYPE:
+      description: "test"
+      required: false
+      type: number
+      default: 4
+  TEST_REQUIRED:
+      description: "test"
+      required: false
+      type: number
+      default: 4
+  TEST_TYPE:
+      description: "test"
       required: false
       type: number
       default: 4

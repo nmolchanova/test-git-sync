@@ -19,7 +19,7 @@ variables:
       required: false
       type: number
       default: 4
-  TEST_TYPE:
+  TEST_REMOVED:
       description: "test"
       required: false
       type: number

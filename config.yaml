@@ -1,5 +1,5 @@
 variables:
-  TEST:
+  TEST_NEW:
       description: "test"
       required: true
       type: string

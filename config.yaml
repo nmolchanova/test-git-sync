@@ -1,26 +1,21 @@
 variables:
-  TEST:
-      description: "test"
+  TEST_NEW:
+      description: "test new var added"
       required: true
       type: string
       default: "change"
   TEST_DEFAULT:
-      description: "test"
+      description: "test default value"
       required: false
       type: string
-      default: qsfsd
+      default: wersw
   TEST_TYPE:
-      description: "test"
+      description: "test type change"
       required: false
-      type: string
-      default: 4
-  TEST_REQUIRED:
-      description: "test"
-      required: true
       type: number
       default: 4
-  TEST_REMOVED:
-      description: "test"
+  TEST_REQUIRED:
+      description: "test required field"
       required: false
       type: number
       default: 4

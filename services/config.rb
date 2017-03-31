@@ -26,9 +26,7 @@ end
 coreo_uni_util_variables "rds-update-planwide-1" do
   action :set
   variables([
-                {'COMPOSITE::coreo_uni_util_variables.rds-planwide.results' => 'COMPOSITE::coreo_aws_rule_runner.advise-rds.report'},
-                {'COMPOSITE::coreo_uni_util_variables.rds-planwide.number_violations' => 'COMPOSITE::coreo_aws_rule_runner.advise-rds.number_violations'},
-
+                {'GLOBAL::results' => 'COMPOSITE::coreo_aws_rule_runner.advise-rds.report'}
             ])
 end
 

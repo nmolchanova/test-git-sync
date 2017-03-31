@@ -35,6 +35,7 @@ function setTableAndSuppression() {
   coreoExport('suppression', JSON.stringify(suppression));
 }
 setTableAndSuppression();
+callback();
   EOH
 end
 

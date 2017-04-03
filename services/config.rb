@@ -42,7 +42,7 @@ end
 coreo_uni_util_variables "test" do
   action :set
   variables([
-                {'GLOBAL::results' => 'should be updated'},
+                {'GLOBAL::test.test2' => 'should be updated'},
                 {'GLOBAL::table' => 'COMPOSITE::coreo_uni_util_jsrunner.tags-to-notifiers-array-rds.table'},
                 {'COMPOSITE::coreo_uni_util_variables.test.tables' => 'COMPOSITE::coreo_uni_util_jsrunner.tags-to-notifiers-array-rds.table'}
             ])

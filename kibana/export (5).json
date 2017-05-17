@@ -1,15 +1,14 @@
-
-    "_id": "CP-Team-DEVTEST",
-    "_type": "visualization",
-    "_source": {
-      "title": "LALALALA",
-      "visState": "{\"title\":\"CP Team DEVTEST\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":false,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":true,\"defaultYExtents\":false,\"setYExtents\":true,\"yAxis\":{\"max\":15,\"min\":-1}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# of Trails\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"run_id\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"legendOpen\":false}}",
-      "description": "",
-      "version": 2,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"violation_reports\",\"query\":{\"query_string\":{\"query\":\"plan.id:58e7fb75c7377b0105674609 rule.keyword.raw:\\\"cloudtrail-inventory\\\" -rule.keyword:cloudtrail-inventory-1 -rule.keyword:cloudtrail-trail-with-global\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
+{
+  "_id": "CP-Team-DEVTEST",
+  "_type": "visualization",
+  "_source": {
+    "title": "LALALALA",
+    "visState": "{\"title\":\"CP Team DEVTEST\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":false,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":true,\"defaultYExtents\":false,\"setYExtents\":true,\"yAxis\":{\"max\":15,\"min\":-1}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# of Trails\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"run_id\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"legendOpen\":false}}",
+    "description": "",
+    "version": 2,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"index\":\"violation_reports\",\"query\":{\"query_string\":{\"query\":\"plan.id:58e7fb75c7377b0105674609 rule.keyword.raw:\\\"cloudtrail-inventory\\\" -rule.keyword:cloudtrail-inventory-1 -rule.keyword:cloudtrail-trail-with-global\",\"analyze_wildcard\":true}},\"filter\":[]}"
     }
   }
-]
+}

@@ -5,7 +5,7 @@ coreo_uni_util_jsrunner "tags-to-notifiers-array-rds" do
   packages([
                {
                    :name => "cloudcoreo-jsrunner-commons",
-                   :version => "1.10.7-9"
+                   :version => "1.10.7-beta45"
                },
                {
                    :name => "js-yaml",
@@ -14,27 +14,8 @@ coreo_uni_util_jsrunner "tags-to-notifiers-array-rds" do
                   ])
   json_input '{}'
   function <<-EOH
-function setTableAndSuppression() {
-  let table;
-  let suppression;
-  const fs = require('fs');
-  const yaml = require('js-yaml');
-  try {
-      suppression = yaml.safeLoad(fs.readFileSync('./suppression.yaml', 'utf8'));
-  } catch (e) {
-      console.log("Error reading suppression.yaml file: " , e);
-      suppression = {};
-  }
-  try {
-      table = yaml.safeLoad(fs.readFileSync('./table.yaml', 'utf8'));
-  } catch (e) {
-      console.log("Error reading table.yaml file: ", e);
-      table = {};
-  }
-  coreoExport('table', JSON.stringify(table));
-  coreoExport('suppression', JSON.stringify(suppression));
-}
-setTableAndSuppression();
+  const CloudCoreoJSRunner = require('cloudcoreo-jsrunner-commons');
+  console.log(CloudCoreoJSRunner)
 callback();
   EOH
 end

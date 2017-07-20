@@ -45,8 +45,3 @@ coreo_uni_util_jsrunner "test-runner" do
     callback([violations]);
   EOH
 end
-
-coreo_uni_util_variables "cloudtrail-update-planwide-2" do
-  action :set
-  variables([ {'COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report' => 'COMPOSITE::coreo_uni_util_jsrunner.test-runner.return'} ])
-end

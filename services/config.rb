@@ -38,7 +38,7 @@ coreo_uni_util_jsrunner "test-runner" do
                    :version => "3.7.0"
                }
                   ])
-  json_input '{"violations":COMPOSITE::coreo_aws_rule_runner.advise-cloudtrail.report}'
+  json_input '{"violations":COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report}'
   function <<-EOH
     newJSONInput.violations = {};
     callback(newJSONInput.violations);

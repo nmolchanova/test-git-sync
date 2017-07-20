@@ -22,5 +22,31 @@ coreo_aws_rule_runner "cloudtrail-inventory-runner" do
   action :run
   service :cloudtrail
   rules ["cloudtrail-logs-encrypted"]
+  regions ${AUDIT_AWS_RDS_REGIONS}
 end
 
+coreo_uni_util_jsrunner "test-runner" do
+  action :run
+  data_type "json"
+  provide_composite_access true
+  packages([
+               {
+                   :name => "cloudcoreo-jsrunner-commons",
+                   :version => "*"
+               },
+               {
+                   :name => "js-yaml",
+                   :version => "3.7.0"
+               }
+                  ])
+  json_input '{"violations":COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report}'
+  function <<-EOH
+    violations = {};
+    callback([violations]);
+  EOH
+end
+
+coreo_uni_util_variables "cloudtrail-update-planwide-2" do
+  action :set
+  variables([ {'COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report' => 'COMPOSITE::coreo_uni_util_jsrunner.test-runner.return'} ])
+end

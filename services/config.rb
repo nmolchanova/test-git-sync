@@ -40,8 +40,8 @@ coreo_uni_util_jsrunner "test-runner" do
                   ])
   json_input '{"violations":COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report}'
   function <<-EOH
-    newJSONInput.violations = {};
-    callback(newJSONInput.violations);
+    violations = {};
+    callback(violations);
   EOH
 end
 

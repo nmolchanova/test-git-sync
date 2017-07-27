@@ -1,47 +1,24 @@
-coreo_aws_rule "cloudtrail-logs-encrypted" do
+coreo_aws_rule "iam-inactive-key-no-rotation" do
   action :define
-  service :user
-  category "Audit"
-  link "http://kb.cloudcoreo.com/mydoc_cloudtrail-logs-encrypted.html"
-  display_name "Verify CloudTrail logs are encrypted at rest using KMS CMKs"
-  suggested_action "It is recommended that CloudTrail be configured to use SSE-KMS."
-  description "AWS CloudTrail is a web service that records AWS API calls for an account and makes those logs available to users and resources in accordance with IAM policies. AWS Key Management Service (KMS) is a managed service that helps create and control the encryption keys used to encrypt account data, and uses Hardware Security Modules (HSMs) to protect the security of encryption keys. CloudTrail logs can be configured to leverage server side encryption (SSE) and KMS customer created master keys (CMK) to further protect CloudTrail logs."
-  level "Medium"
-  meta_cis_id "2.7"
-  meta_cis_scored "true"
-  meta_cis_level "2"
-  meta_nist_171_id "3.3.1"
-  objectives [""]
-  audit_objects [""]
-  operators [""]
-  raise_when [true]
-  id_map "static.no_op"
+  service :iam
+  link "http://kb.cloudcoreo.com/mydoc_iam-inactive-key-no-rotation.html"
+  display_name "User Has Access Keys Inactive and Un-rotated"
+  description "User has inactive keys that have not been rotated in the last 90 days."
+  category "Access"
+  suggested_action "If you regularly use the AWS access keys, we recommend that you also regularly rotate or delete them."
+  level "High"
+  meta_nist_171_id "3.5.9"
+  id_map "modifier.user_name"
+  objectives ["users", "access_keys", "access_keys"]
+  audit_objects ["", "access_key_metadata.status", "access_key_metadata.create_date"]
+  call_modifiers [{}, {:user_name => "users.user_name"}, {:user_name => "users.user_name"}]
+  operators ["", "==", "<"]
+  raise_when ["", "Inactive", "90.days.ago"]
 end
 
-coreo_aws_rule_runner "cloudtrail-inventory-runner" do
+coreo_aws_rule_runner "iam-runner" do
   action :run
-  service :cloudtrail
-  rules ["cloudtrail-logs-encrypted"]
+  service :iam
+  rules ["iam-inactive-key-no-rotation"]
   regions ${AUDIT_AWS_RDS_REGIONS}
-end
-
-coreo_uni_util_jsrunner "test-runner" do
-  action :run
-  data_type "json"
-  provide_composite_access true
-  packages([
-               {
-                   :name => "cloudcoreo-jsrunner-commons",
-                   :version => "*"
-               },
-               {
-                   :name => "js-yaml",
-                   :version => "3.7.0"
-               }
-                  ])
-  json_input '{"violations":COMPOSITE::coreo_aws_rule_runner.cloudtrail-inventory-runner.report}'
-  function <<-EOH
-    violations = {};
-    callback([violations]);
-  EOH
 end

@@ -17,7 +17,6 @@ coreo_uni_util_jsrunner "test-violation-object" do
                     'test-violation': {
                         'service': "cloudtrail",
                         'display_name': "Inventory CloudTrail",
-                        'result_info': [],
                         'description': "Inventory CloudTrail",
                         'category': "Inventory",
                         'suggested_action': "",

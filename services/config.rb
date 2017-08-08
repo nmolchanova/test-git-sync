@@ -20,7 +20,7 @@ coreo_uni_util_jsrunner "test-violation-object" do
                         'description': "Inventory CloudTrail",
                         'category': "Inventory",
                         'suggested_action': "",
-                        'level': "Internal",
+                        'level': "TEST",
                         'link': "http://kb.cloudcoreo.com/",
                         'include_violations_in_count': false,
                         'region': "ap-south-1"

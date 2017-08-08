@@ -23,8 +23,7 @@ coreo_uni_util_jsrunner "test-violation-object" do
                         'level': "Internal",
                         'link': "http://kb.cloudcoreo.com/",
                         'include_violations_in_count': false,
-                        'region': "ap-south-1",
-                        'timestamp': 123123123123
+                        'region': "ap-south-1"
                     }
                 }
             }

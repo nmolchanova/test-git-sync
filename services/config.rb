@@ -11,22 +11,21 @@ coreo_uni_util_jsrunner "test-violation-object" do
   json_input '{}'
   function <<-EOH
     const testReport = {
-        us-east-1: {
-            testObj: {
-                violations: {
-                    test-violation: {
-                        cloudtrail-inventory-1: Object
-                        service: "cloudtrail"
-                        display_name: "Inventory CloudTrail"
-                         result_info: Array [1]
-                        description: "Inventory CloudTrail"
-                        category: "Inventory"
-                        suggested_action: ""
-                        level: "Internal"
-                        link: "http://kb.cloudcoreo.com/"
-                        include_violations_in_count: false
-                        region: "ap-south-1"
-                        timestamp: 123123123123
+        'us-east-1': {
+            'testObj': {
+                'violations': {
+                    'test-violation': {
+                        'service': "cloudtrail",
+                        'display_name': "Inventory CloudTrail",
+                        'result_info': [],
+                        'description': "Inventory CloudTrail",
+                        'category': "Inventory",
+                        'suggested_action': "",
+                        'level': "Internal",
+                        'link': "http://kb.cloudcoreo.com/",
+                        'include_violations_in_count': false,
+                        'region': "ap-south-1",
+                        'timestamp': 123123123123
                     }
                 }
             }

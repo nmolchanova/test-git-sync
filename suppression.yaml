@@ -1,4 +1,4 @@
 elb-current-ssl-policy:
   - cc-577bf0f04c1-vpn-dev-elb: ""
   - cc-5780ad83d13-mongodb-elb: "2017-01-10T00:00Z"
-  - cc-582b8de9492-app-elb: "2017-11-21T00:00Z"
+  - cc-582b8de9492-app-elb: "2017-21-11T00:00Z"
